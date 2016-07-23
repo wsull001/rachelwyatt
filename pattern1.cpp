@@ -41,10 +41,20 @@ int main()  {
     printer* p1 = new word("hello");
     printer* p2 = new word("rachel");
 
+
+    p1->print();
+    cout << endl;
+    p2->print();
+    cout << endl;
+
     vector<printer*> words;
 
     words.push_back(p1);
     words.push_back(p2);
+
+    printer* p4 = new sentence(words);
+
+    words.push_back(p4);
 
     printer* p3 = new sentence(words);
 
